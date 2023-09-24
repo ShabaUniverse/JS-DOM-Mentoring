@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>before()</title>
+  </head>
+  <body>
+    <div>
+      <ul id="ui-list">
+        <li>React</li>
+        <li>Vue</li>
+      </ul>
+    </div>
+  </body>
+
+  <script>
+    let frameworks = ['Angular', 'Solid']
+    let ul = document.querySelector('#ui-list');
+    
+    let items = frameworks.map(item => {
+      let li = document.createElement('li');
+      li.innerHTML = item;
+      return li
+    })
+    ul.firstChild.before(...items);
+  </script>
+</html>
+
+
+<!-- 
+  Element.before(node)
+  In this syntax, the before() method inserts the node before the Element in the DOM tree.
+ -->
+
+
+  <!-- 
+  The HTML document contains an empty unordered list (<ul>) with the id "ui-list."
+
+  You have an array frameworks containing two strings: "Angular" and "Solid."
+  You select the unordered list element with the id "ui-list" 
+  and store it in the ul variable using document.querySelector('#ui-list').
+  You then use the map() method to iterate through the frameworks array and 
+  create new list items (<li>) for each item in the array. 
+    Each new <li> element is created with the content of an item from the frameworks array.
+
+  Finally, you use the before() method to insert the 
+  newly created list items (...items) before the first child element of the unordered list (<ul>).
+
+  So, when this code is executed, it will insert two new list items 
+  ("Angular" and "Solid") before the existing list items ("React" and "Vue") in the unordered list. 
+  After the code is executed, the resulting HTML will look like this:
+   -->
+
