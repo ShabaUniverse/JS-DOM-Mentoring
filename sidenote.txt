@@ -1,0 +1,96 @@
+html is a document element. 
+------------------------------------------------------------------------------
+getElementByTagName - returns array of tag objects. (HTMLCollection of elements that matching tag name)
+------------------------------------------------------------------------------
+getElementsByClassName - used to retrive collection of elements that has specific classname;
+------------------------------------------------------------------------------
+document.querySelector('p a') - gets all the links inside of "p" element;
+------------------------------------------------------------------------------
+document.querySelectorAll('div, p') - gets all the "div's" and "p's"
+------------------------------------------------------------------------------
+document.querySelectorAll('ul > li') - gets all 'li' elements that directly inside of "ul" element
+------------------------------------------------------------------------------
+document.querySelectorAll('ul.nav > li') - gets all "li" elements inside of element "ui" named by class "nav"
+------------------------------------------------------------------------------
+document.querySelectorAll('p ~ a') - match all "a" elements that follow "p" element, immediately or not
+------------------------------------------------------------------------------
+document.querySelector('h1 + a'); - match elements where "a" directly follows "h1"
+------------------------------------------------------------------------------
+document.querySelectorAll('li:nth-child(2)')
+------------------------------------------------------------------------------
+document.querySelector('p::first-line') - gets all the first line of the "p" element
+------------------------------------------------------------------------------
+.parentNode - returns the read-only parent node of a specified node or null if it does not exist.
+------------------------------------------------------------------------------
+nextElementSibling - returns the next sibling of an element or null if the element is the last.
+------------------------------------------------------------------------------
+previousElementSibling -  returns the previous sibling of an element or null if the element is the first.
+------------------------------------------------------------------------------
+There is type of nodes. Such a text-node, or element-node. ETC 
+------------------------------------------------------------------------------
+firstElementChild - return first child element in parent
+------------------------------------------------------------------------------
+lastElementChild - return last child element in parent
+------------------------------------------------------------------------------
+childNodes - returns all child elements with any node type
+-----------------------------------------------------------------------------
+parentElement.children - to get child element only the element node type
+------------------------------------------------------------------------------
+document.createElement - creates new element
+------------------------------------------------------------------------------
+element.appendChild - adds child element to a parent element
+------------------------------------------------------------------------------
+difference between innerHTML and textContent - 
+innerHTML is about tags and text, when textContent is just a text.
+textContent property to return the concatenation of the textContent of every child node.
+------------------------------------------------------------------------------
+innerText - takes the CSS style into account and returns only human-readable text. 
+if the element's style "display: none", then console wont display it neither.
+The innerText returns the human-readable text that takes CSS into account.
+------------------------------------------------------------------------------
+innerHTML property returns the current HTML source of the document, 
+including all changes that have been made since the page was loaded.
+------------------------------------------------------------------------------
+Do not use innerHTML to set new contents that you have no control to avoid a security risk.
+
+-----------------------------------------------------------------------
+let div = document.querySelector('.container');
+div.innerHTML += '<p>JS DOM</p>';
+---------------------------------------------------------------------------------------
+
+Using DocumentFragment is helpful when you have to render a lot of DOM elements.
+Inserting or refreshing bunch of elements might be lazy and slow operation due to rendering.
+DocumentFragment lets you to create and modify element out of real DOM, and then insert them all
+once they done.
+--------------------------------------------------------------------------------
+DocumentFragment to compose DOM nodes before updating them to the active DOM tree to get better performance.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+
+
+
