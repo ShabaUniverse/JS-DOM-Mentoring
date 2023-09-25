@@ -76,12 +76,31 @@ insertAdjacentHTML() method to insert a text as Nodes into the DOM tree at a spe
 Note that the 'beforebegin' and 'afterend' are only relevant if the element is in 
 the DOM tree and has a parent element.
 --------------------------------------------------------------------------------
+parentNode.removeChild() to remove a child node of a parent node.
+--------------------------------------------------------------------------------
+Node.replaceChild() to replace a child element of a node by a new element.
+--------------------------------------------------------------------------------
+node.cloneNode() method to clone the node.
+Pass true into the cloneNode() method to create a deep clone of a DOM element.
+If the deep is true, then the original node and all of its descendants are cloned.
 
+If the deep is false, only the original node will be cloned. 
+All the node’s descendants will not be cloned.
 --------------------------------------------------------------------------------
+parentNode.append() method inserts a set of Node objects or DOMString objects 
+after the last child of a parent node
 --------------------------------------------------------------------------------
+appendChild - is a method to append a single child Node.
+accepts a single argument, which should node to be appended.
+
+append - is a method to append multiple nodes and DOMString.
+accepts one or more arguments.
+
+appendChild is used for appending a single child node to a parent, 
+while append is used for 
+appending multiple nodes and text values to the end of an element's children.
 --------------------------------------------------------------------------------
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
+
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
