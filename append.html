@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>append</title>
+  </head>
+  <body>
+    <div id="main">
+      <ul id="list">
+        <li>Javascript</li>
+        <li>Html</li>
+        <li>CSS</li>
+      </ul>
+    </div>
+  </body>
+
+  <script>
+    let list = document.querySelector("#list");
+    let frameworks = ["React", "Vue", "Angular"];
+
+    let frameworksAsLi = frameworks.map((framework) => {
+      let li = document.createElement("li");
+      li.innerHTML = framework;
+      return li;
+    });
+
+    list.append(...frameworksAsLi);
+  </script>
+</html>
+
+<!-- 
+parentNode.append() method inserts a set of Node objects or DOMString 
+objects after the last child of a parent node:
+
+parentNode.append(...nodes);
+parentNode.append(...DOMStrings);
+ -->
