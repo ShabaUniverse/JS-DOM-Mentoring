@@ -6,6 +6,27 @@
     <title>removeChild</title>
 </head>
 <body>
-    
+    <div class="main">
+        <ul id="list">
+            <li>Home</li>
+            <li>Service</li>
+            <li>About</li>
+        </ul>
+    </div>
 </body>
+
+    <script>
+        let list = document.getElementById('list');
+        list.removeChild(list.lastElementChild);
+
+        list.innerHTML = '';
+        // this removes all elements inside of list node
+    </script>
 </html>
+
+
+<!-- 
+    Use parentNode.removeChild() to remove a child node of a parent node.
+    
+    The parentNode.removeChild() throws an exception if the child node cannot be found in the parent node.
+ -->

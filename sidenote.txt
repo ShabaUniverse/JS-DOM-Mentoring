@@ -32,6 +32,9 @@ firstElementChild - return first child element in parent
 ------------------------------------------------------------------------------
 lastElementChild - return last child element in parent
 ------------------------------------------------------------------------------
+firstChild returns any type of node (including non-element nodes), 
+while firstElementChild specifically returns the first child element node (ignoring non-element nodes). 
+------------------------------------------------------------------------------
 childNodes - returns all child elements with any node type
 -----------------------------------------------------------------------------
 parentElement.children - to get child element only the element node type
