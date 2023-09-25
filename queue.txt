@@ -1,2 +1,5 @@
 1. before.html
 2. after.html
+3. insertAdjacentHTML.html
+4. replaceChild.html
+5. removeChild

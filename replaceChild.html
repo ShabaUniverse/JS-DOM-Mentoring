@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>replaceChild</title>
+  </head>
+  <body>
+    <div class="main">
+      <ul id="list">
+        <li>HomePage</li>
+        <li>Service</li>
+        <li>Contacts</li>
+        <li>About</li>
+      </ul>
+    </div>
+  </body>
+
+  <script>
+    let list = document.getElementById('list');
+    let homeLi = document.createElement('li');
+    homeLi.textContent = 'Home';
+    list.replaceChild(homeLi, list.firstElementChild);
+  </script>
+</html>
+
+
+<!-- 
+    Node.replaceChild() to replace a child element of a node by a new element.
+
+    parentNode.replaceChild(newChild, oldChild);
+ -->
