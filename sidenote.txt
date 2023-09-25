@@ -69,8 +69,11 @@ element.before() method allows you to insert one or more nodes before the elemen
 --------------------------------------------------------------------------------
 element.after() method allows you to insert one or more nodes after the element.
 --------------------------------------------------------------------------------
-
+insertAdjacentHTML() method to insert a text as Nodes into the DOM tree at a specified position.
+Note that the 'beforebegin' and 'afterend' are only relevant if the element is in 
+the DOM tree and has a parent element.
 --------------------------------------------------------------------------------
+
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------

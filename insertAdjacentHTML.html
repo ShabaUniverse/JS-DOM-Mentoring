@@ -6,6 +6,19 @@
     <title>insertAdjacentHTML</title>
 </head>
 <body>
-    some
+    <div class="main">
+        <ul id="list">
+            <li>Javascript</li>
+        </ul>
+    </div>
 </body>
+
+    <script>
+        let list = document.querySelector("#list");
+        
+        list.insertAdjacentHTML('beforebegin', '<h2>Web Technology</h2>')
+        list.insertAdjacentHTML('afterbegin', "<li>HTML</li>");
+        list.insertAdjacentHTML('beforeend', "<li>CSS</li>");
+        list.insertAdjacentHTML('afterend', '<p>for frontend developers</p>')
+    </script>
 </html>
