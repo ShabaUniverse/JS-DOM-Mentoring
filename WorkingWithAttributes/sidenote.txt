@@ -55,5 +55,30 @@ The getAttribute() returns null if the attribute does not exist.
 The getAttribute() accepts an argument which is the name of the attribute from which you want to return the value.
 getAttribute() returns a string that represents the value of the attribute.
 
+Note that you can use the hasAttribute() method to check 
+if the attribute exists on the element before getting its value.
+
+----------------Remove Attribute---------------------
+
+removeAttribute() accepts an argument which is the name of the attribute that you want to remove. 
+If the attribute does not exist, the removeAttribute()  method wil not raise an error.
+
+Use the removeAttribute() to remove an attribute from a specified element.
+Setting the value of a Boolean attribute to false will not work; use the removeAttribute() method instead.
+
+HTML elements have some attributes which are Boolean attributes. 
+To set false to the Boolean attributes, you cannot simply use the setAttribute() method, 
+but you have to remove the attribute entirely using the removeAttribute() method.
+
+-------------------Has Attribute----------------------
+
+Use the hasAttribute() method to check if an element contains a specified attribute.
+
+The hasAttribute() method accepts an argument that specifies the name 
+of the attribute that you want to check.
+
+The hasAttribute() returns a Boolean value that indicates if the element has the specified attribute.
+If the element contains an attribute, the hasAttribute() returns true; otherwise, it returns false.
+
 
 

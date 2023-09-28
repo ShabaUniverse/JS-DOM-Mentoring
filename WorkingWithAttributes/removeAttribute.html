@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>removeAttribute</title>
+</head>
+<body>
+    <div class="main">
+        <a href="empty" target="_blank" id="link">empty link</a>
+    </div>
+</body>
+
+<script>
+    let link = document.querySelector('#link');
+    if(link){
+        link.removeAttribute('target');
+    }
+    console.log(link);
+</script>
+</html>
