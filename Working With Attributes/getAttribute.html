@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>getAttribute</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1 class="title" id="title">Chrome Hearts</h1>
+    </div>
+  </body>
+
+  <script>
+    let hOne = document.querySelector('.title');
+
+    if(hOne) {
+        let classAttribute = hOne.getAttribute('class');
+        console.log(classAttribute);
+    }
+  </script>
+</html>

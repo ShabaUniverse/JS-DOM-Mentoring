@@ -1,0 +1,59 @@
+-----------Intro--------------- 
+
+We gonna learn the relationship between HTML attributes and DOM object's properties.
+When the browser loads HTML page, it renders corresponding DOM objects based on DOM nodes of the document.
+
+If the page contains: 
+<input type="text" id="username">
+The web browser will generate 'HTMLInputElement' object;
+The input has 2 attributes: the 'type' attribute with the value 'text' and 
+'id' attribute with the value 'username'.
+
+The generated HTMLInputElement will have two corresponding properties:
+The 'input.type' with the value 'text'
+the 'input.id' with the value 'username'
+
+In other words, the web browser will automatically convert attributes of HTML 
+elements to properties of DOM objects.
+
+However, HTML only converts standard attributes to the DOM object's properties.
+For example: 
+<input type="text" id="username" secured="true">
+
+In this example, secured = true, is a non-standard attribute:
+
+let input = document.querySelector('#username');
+console.log(input.secured); ======  undefined
+ 
+----------Attribute Methods----------
+
+To get access to both standard and non-standard attributes, we use following methods:
+
+element.getAttribute(name) – get the attribute value
+element.setAttribute(name, value) – set the value for the attribute
+element.hasAttribute(name) – check for the existence of an attribute
+element.removeAttribute(name) – remove the attribute
+
+-----------------Summary----------------
+Attributes are specified in HTML elements.
+Properties are specified DOM objects.
+Attributes are converted to properties respectively.
+Use the element.attributes property to access standard and custom attributes of an element.
+Use the element.dataset property to access the data-* attributes.
+
+
+---------------Set Attribute------------------------
+
+Use the setAttribute() to set the value of an attribute on a specified element.
+
+
+---------------Get Attribute------------------------
+
+Get the value of an attribute of a specified element by calling the getAttribute() method on the element.
+The getAttribute() returns null if the attribute does not exist.
+
+The getAttribute() accepts an argument which is the name of the attribute from which you want to return the value.
+getAttribute() returns a string that represents the value of the attribute.
+
+
+
