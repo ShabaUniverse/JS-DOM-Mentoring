@@ -1,2 +1,4 @@
 1. styleProperty
 2. getComputedStyle
+3. className
+4. 

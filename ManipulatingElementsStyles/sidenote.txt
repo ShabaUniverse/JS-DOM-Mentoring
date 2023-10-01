@@ -6,3 +6,21 @@ for instance:
 let p = document.getElementById('main');
 let style = getComputedStyle(p, '::first-letter');
 console.log(style.color);
+
+----------------------className----------------------------
+
+className returns a space-separated list of classes of an element as a string.
+
+----------------------classList----------------------------
+
+The element’s classList property returns the live collection of CSS classes of the element.
+Use add() and remove() to add CSS classes to and remove CSS classes from the class list of an element.
+Use replace() method to replace an existing class with a new one.
+Use contains() method to check if the class list of an element contains a specified class.
+Use the toggle() method to toggle a class.
+
+--------------------Getting Width and Height of an element-------------------
+
+Use offsetWidth & offsetHeight properties of the DOM element to get its the width and height.
+
+
