@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style property</title>
+</head>
+<body>
+    <div class="main">
+        <button id="push">Push</button>
+
+        <div class="content">
+            <p>This is demo of css() function</p>
+        </div>
+    </div>
+</body>
+
+<script>
+    let btn = document.querySelector('#push');
+    btn.style.color = 'black';
+    // code on bottom overrides previous, i mean COMPLETELY OVERRIDES.
+    btn.style.cssText = 'background-color: red; padding: 3px 10px; border: none; color: white';
+
+    // code on bottom sets style property. It deletes all the previous parameters of style
+    btn.setAttribute('style', 'color: violet');
+
+    //this code just adds styles to existing one
+    btn.style.backgroundColor = 'black';
+
+    // if you dont want to completely override the existing CSS properties, 
+    // then you can concatenate the new CSS property to the CSS text as follows:
+    btn.style.cssText += 'border: none; border-radius: 10px; width: 150px; padding: 10px 0';
+
+    // The following css() helper function is used to set multiple styles 
+    // for an element from an object of key-value pairs:
+
+    let content = document.querySelector('.content');
+    function css(e, styles) {
+        for(const property in styles){
+            e.style[property] = styles[property]
+        }
+    }
+    css(content, {background: 'blue', textAlign: 'center', padding: '15px 0'})
+</script>
+</html>

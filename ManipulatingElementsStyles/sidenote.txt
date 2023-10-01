@@ -1,0 +1,8 @@
+---------------------GetComputedStyle--------------------
+it return the computed styles of the elements (::firstLetter, :hover, etc).
+it takes two parameters(element, and its pseudo element).
+
+for instance:
+let p = document.getElementById('main');
+let style = getComputedStyle(p, '::first-letter');
+console.log(style.color);
