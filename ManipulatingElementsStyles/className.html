@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>className</title>
+  </head>
+  <body>
+    <div class="main">
+      <ul class="vertical menu" id="menu">
+        <li>Home</li>
+        <li>Servie</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    let menu = document.querySelector('#menu');
+    // The += operator concatenates newClassName to the existing class list of the element. 
+    // Therefore, you need to prefix the new class name with a space like this:
+    menu.className += ' newConcated';
+
+    // using classList to add new class name to existing one. Dont need prefix for that.
+    menu.classList.add('classListed')
+
+    // to complete override class name:
+    menu.className = 'overridedClassName'
+    console.log(menu.className);
+  </script>
+</html>
