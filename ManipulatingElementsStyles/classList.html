@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>classList</title>
+  </head>
+  <body>
+    <div class="main">
+      <p id="paragraph" class="firstClass secondClass">text</p>
+    </div>
+  </body>
+  <script>
+    let paragraph = document.querySelector("#paragraph");
+
+    //classes going to return a DomTokenList object that represents the all class names of selected element
+    let classes = paragraph.classList;
+
+    // The following code displays the class list of the div element in the Console window:
+    // First, select the div element with the id content using the querySelector() method.
+    // Then, iterate over the elements of the classList and show the classes in the Console window.
+    for (let classNick of paragraph.classList) {
+      // console.log('classNick: ' + classNick)
+    }
+
+    // use add() to add new class to class list;
+    paragraph.classList.add('newClassAddedWithAdd');
+
+    // use remove() to remove class from class list
+    paragraph.classList.remove('secondClass');
+    
+    // use replace()
+    paragraph.classList.replace('firstClass', 'OoooohFirstClass');
+    
+    // check if elements has a specified class
+    // console.log(paragraph.classList.contains('someClassInnit'));
+
+    // If the class list of an element contains a specified class name, 
+    // the toggle() method removes it. If the class list doesn’t contain the class name, 
+    // the toggle() method adds it to the class list.
+    paragraph.classList.toggle('ToggledOne');
+    console.log(paragraph.classList); 
+
+    </script>
+</html>
