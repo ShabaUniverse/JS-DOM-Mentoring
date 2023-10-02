@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handling Events</title>
+  </head>
+  <body>
+    <div class="main">
+      <button id="btn" onclick="console.log('this is html event handler')">click me</button>
+    </div>
+  </body>
+  <script>
+    function showAlert() {
+        alert('some message')
+    }
+    let btn = document.querySelector('#btn');
+    btn.addEventListener('click', showAlert);
+    // it removes eventListener, and alert wont be showed.
+    btn.removeEventListener('click', showAlert)
+  </script>
+</html>
