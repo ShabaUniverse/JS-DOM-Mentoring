@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events Intro</title>
+    <style>
+        .content {
+            background-color: gray;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <button id="btn">click event</button>
+      <a href="https://www.google.com/" id="link">go Google</a>
+
+      <div class="content">
+        <h4>click to demo stopPropogation</h4>
+        <button id="btnStop">click</button>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    // click event
+    let btn = document.querySelector("#btn");
+    btn.addEventListener("click", function () {
+      alert("it was clicked");
+    });
+
+    // preventDefault
+    let link = document.querySelector("#link");
+    link.addEventListener("click", function (event) {
+      console.log("clicked");
+      event.preventDefault();
+    });
+
+    // stopPropagation
+    // if there is no stopPropagation, then you would see two logs: btnStop and content.
+    let btnStop = document.querySelector('#btnStop');
+    btnStop.addEventListener('click', function(event){
+        console.log('btnStop was clicked')
+        event.stopPropagation();
+    })
+
+    let content = document.querySelector('.content');
+    content.addEventListener('click', function(event){
+        console.log('content was clicked')
+    })
+  </script>
+</html>

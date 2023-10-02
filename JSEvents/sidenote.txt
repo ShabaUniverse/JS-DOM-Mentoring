@@ -1,0 +1,10 @@
+------------------Intro to Events------------------------
+Use addEventListener() to register an event that connects an event to an event listener
+The event object is accessible only within the event listener.
+Use preventDefault() method to prevent the default behavior of an event, but does not stop the event flow.
+Use stopPropagation() method to stop the flow of an event through the DOM tree, 
+but does not cancel the browser default behavior.
+
+
+------------------Handling Events----------------------
+
