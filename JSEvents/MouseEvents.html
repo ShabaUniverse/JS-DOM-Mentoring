@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Events</title>
+    <style>
+      .track {
+        background-color: red;
+        width: 400px;
+        height: 250px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <button id="btn">click</button>
+      <p id="message"></p>
+      <button id="metabtn">click me with alt, shift, ctrl or meta</button>
+      <p id="messageKeys"></p>
+      <div class="track">move mouse around this</div>
+      <p class="log"></p>
+    </div>
+  </body>
+
+  <script>
+    // this is for mouse click
+    let btn = document.querySelector("#btn");
+    btn.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+    });
+
+    btn.addEventListener("mouseup", (e) => {
+      let message = document.querySelector("#message");
+      switch (e.button) {
+        case 0:
+          console.log("left click been proccessed");
+          message.innerHTML = "you clicked left";
+          break;
+        case 2:
+          console.log("right click been proccessed");
+          message.innerHTML = "you clicked right";
+          break;
+      }
+    });
+
+    // this is for mouse clicks + keyboard
+    let metabtn = document.querySelector("#metabtn");
+    let messageKeys = document.querySelector("#messageKeys");
+    metabtn.addEventListener("click", (e) => {
+      let forMessage = [];
+      if (e.shiftKey) forMessage.push("shift");
+      if (e.ctrlKey) forMessage.push("ctrl");
+      if (e.altKey) forMessage.push("alt");
+      if (e.metaKey) forMessage.push("meta");
+      messageKeys.textContent = "Keys: " + forMessage.join(" ");
+    });
+
+    // getting screen coordinates
+    let track = document.querySelector(".track");
+    track.addEventListener("mousemove", (e) => {
+      let log = document.querySelector(".log");
+      log.innerText = `
+            Screen X/Y: (${e.screenX}, ${e.screenY})
+            Client X/Y: (${e.clientX}, ${e.clientY})`;
+    });
+  </script>
+</html>
