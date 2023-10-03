@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard Events</title>
+  </head>
+  <body>
+    <div class="main">
+      <input type="text" id="message" />
+    </div>
+  </body>
+
+  <script>
+    // keyboard event properties
+    let message = document.querySelector('#message');
+    message.addEventListener('keydown', function(e){
+        console.log(`key: ${e.key}, code: ${e.code}`);
+    })
+  </script>
+</html>
