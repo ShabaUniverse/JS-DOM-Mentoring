@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        height: 100px;
+        margin: 5px 0;
+        background-color: gray;
+      }
+
+      #special {
+        background-color: chartreuse;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <button id="btn">scroll into view</button>
+      <ul>
+        <li>Aston Villa</li>
+        <li>Man City</li>
+        <li>West Ham</li>
+        <li>Arsenal</li>
+        <li>Chelsea</li>
+        <li>Tottenham</li>
+        <li>Brentford</li>
+        <li>Wolves</li>
+        <li id="special">QPR</li>
+        <li>Hull City</li>
+        <li>Man United</li>
+        <li>Inter</li>
+        <li>Milan</li>
+        <li>Juve</li>
+        <li>Bologna</li>
+        <li>PSG</li>
+        <li>Lille</li>
+      </ul>
+    </div>
+  </body>
+
+  <script>
+    let btn = document.querySelector("#btn");
+    let special = document.querySelector("#special");
+
+    // if the scrollIntoView is set to false, then screen will display it on the bottom.
+    btn.addEventListener('click', function() {
+        special.scrollIntoView(true)
+    })
+  </script>
+</html>
