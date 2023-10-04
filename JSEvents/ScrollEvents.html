@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Events</title>
+    <style>
+      .section1 {
+        background-color: aquamarine;
+        height: 100vh;
+      }
+
+      .section2 {
+        background-color: yellowgreen;
+        height: 100vh;
+      }
+
+      .section3 {
+        background-color: burlywood;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="section1"></div>
+      <div class="section2"></div>
+      <div class="section3"></div>
+    </div>
+  </body>
+  
+  <script>
+    let section2 = document.querySelector(".section2");
+    window.addEventListener('scroll', function(){
+      let scrollY = window.scrollY;
+      if(scrollY > 300){
+        section2.style.backgroundColor = 'red';
+      }
+      if(scrollY < 300){
+        section2.style.backgroundColor = 'yellowgreen'
+      }
+      console.log(scrollY)
+    })
+  </script>
+</html>
