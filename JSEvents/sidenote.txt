@@ -8,3 +8,103 @@ but does not cancel the browser default behavior.
 
 ------------------Handling Events----------------------
 
+There are three ways to assign an event handler: HTML event handler attribute, 
+element’s event handler property, and addEventListener().
+Assign an event handler via the HTML event handler attribute should be avoided.
+
+-----------------Mouse Events---------------------------
+
+The "mousedown" fires when you depress the mouse button on the element.
+The "mouseup" fires when you release the mouse button on the element.
+The "click" fires when one mousedown and one mouseup detected on the element.
+The "dblclick" event fires when you double click over an element.
+The "mousemove" event fires repeatedly when you move the mouse cursor around an element
+
+The "mouseover" fires when the mouse cursor is outside of the element and then move to inside 
+the boundaries of the element.
+
+The "mouseout" fires when the mouse cursor is over an element and then moves another element.
+
+The mouseenter fires when the mouse cursor is outside of an element and 
+then moves to inside the boundaries of the element.
+
+The mouseleave fires when the mouse cursor is over an element and 
+then moves to the outside of the element’s boundaries.
+
+Both mouseenter and mouseleave does not bubble and does not fire 
+when the mouse cursor moves over descendant elements.
+
+---Detecting Mouse Buttons: 
+0: the main mouse button is pressed, usually the left button.
+1: the auxiliary button is pressed, usually the middle button or the wheel button.
+2: the secondary button is pressed, usually the right button.
+3: the fourth button is pressed, usually the Browser Back button.
+4: the fifth button is pressed, usually the Browser Forward button.
+
+
+---Getting screen coordinates: 
+
+The screenX and screenY properties of the event passed to the mouse event handler return the screen 
+coordinates of the location of the mouse in relation to the entire screen.
+
+On the other hand, the clientX and clientY properties provide the horizontal and vertical 
+coordinates within the application’s client area at which the mouse event occurred
+
+---Summary of MouseEvents
+
+Use addEventListener() method to register a mouse event handler.
+
+The event.button indicates which mouse button was pressed to trigger the mouse event.
+
+The modifier keys: alt, shift, ctrl, and meta (Mac) can be obtained 
+via properties of the event object passed to the mouse event handler.
+
+The screenX and screenY properties return the horizontal and 
+vertical coordinates of the mouse pointer in screen coordinates.
+
+The clientX and clientY properties of the event object return horizontal and vertical coordinates 
+within the application’s client area at which the mouse event occurred.
+
+------------------------Keyboard Events------------------------
+
+When you press a character key on the keyboard, the keydown, keypress, 
+and keyup events are fired sequentially. However, 
+if you press a non-character key, only the keydown and keyup events are fired.
+
+The keyboard event object has two important properties: 
+key and code  properties that allow you to detect which key has been pressed.
+
+The key property returns the value of the key pressed 
+while the code represents a physical key on the keyboard.
+
+-------------------Scroll Events------------------------------------------
+
+The scroll event fires when you scroll a webpage or an element.
+For a page, the scrollX and scrollY properties return the number of pixels 
+that the document is currently scrolled horizontally and vertically.
+
+For an element, the scrollTop and scrollLeft properties set or get the number 
+of pixels that the element’s content is vertically scrolled and scrolled from its left edge.
+
+Use the event throttling technique to better handle the scroll events. 
+In modern web browsers, you can use passive event listeners.
+
+
+--------------------Focus Events----------------------------------
+
+The focus events fire when an element receives or loses focus. These are the two main focus events:
+
+focus fires when an element has received focus.
+blur fires when an element has lost focus.
+
+The window gains focus when you bring it forward by using Alt+Tab or 
+clicking on it and loses focus when you send it back.
+
+Links when you use a mouse or a keyboard.
+
+Form fields like input text when you use a keyboard or a mouse.
+
+Elements with tabindex, also when you use a keyboard or a mouse.
+
+------------------Hashchange Events-----------------------
+
