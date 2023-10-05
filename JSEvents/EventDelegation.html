@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Delegation</title>
+    <style>
+      li {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <ul class="menu">
+        <li id="home">Home</li>
+        <li id="dashboard">Dashboard</li>
+        <li id="report">Report</li>
+      </ul>
+    </div>
+  </body>
+
+  <script>
+    let menu = document.querySelector(".menu");
+    menu.addEventListener("click", (e) => {
+      let target = e.target;
+
+      switch (target.id) {
+        case "home":
+          console.log("home was clicked");
+          break;
+        case "dashboard":
+          console.log("dashboard was clicked");
+          break;
+        case "report":
+          console.log("report was clicked");
+          break;
+      }
+    });
+  </script>
+</html>
+
+<!-- When you click any <li> element inside the <ul> element with the id menu, 
+the click event bubbles to the parent element which is the <ul> element. 
+
+So instead of handling the click event of the individual <li> element, 
+you can capture the click event at the parent element. 
+ 
+In the click event listener, you can access the target property which references 
+the element that dispatches the event. To get the id of the element that the event actually fires, 
+you use the target.id property. 
+
+Once having the id of the element that fires the click event, 
+you can have code that handles the event correspondingly.  -->
