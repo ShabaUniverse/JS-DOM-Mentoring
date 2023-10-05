@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Events</title>
+  </head>
+  <body>
+    <div class="main">
+      <h2 id="title">Create Events</h2>
+    </div>
+  </body>
+
+  <script>
+    let title = document.querySelector("#title");
+
+    // highlight function
+    function highlight(element, callback) {
+      element.style.backgroundColor = "yellow";
+      if (callback && typeof callback === "function") {
+        callback(element);
+      }
+    }
+
+    // addBorder function
+    function addBorder(element) {
+      element.style.border = "2px solid black";
+    }
+
+    highlight(title, addBorder);
+  </script>
+</html>

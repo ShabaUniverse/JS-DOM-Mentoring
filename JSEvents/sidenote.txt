@@ -106,5 +106,28 @@ Form fields like input text when you use a keyboard or a mouse.
 
 Elements with tabindex, also when you use a keyboard or a mouse.
 
-------------------Hashchange Events-----------------------
+----------------------Hashchange Events-----------------------
 
+The hashchange event fires when the URL hash changed.
+
+To register an event listener, you call the addEventListener() 
+method or assign an event listener to the onhashchange property of the window object.
+
+----------------------Event Delegation------------------------
+
+----JavaScript event delegation benefits
+When it is possible, you can have a single event handler on the document 
+that will handle all the events of a particular type. By doing this, you gain the following benefits:
+
+Less memory usage, better performance.
+
+Less time required to set up event handlers on the page.
+
+The document object is available immediately. As long as the element is rendered, 
+it can start functioning correctly without delay. You don’t need to wait for the DOMContentLoaded or load events.
+
+-----Summary
+Having a large number of event handlers will take up memory and degrade the performance of a page.
+
+The event delegation technique utilizes the event bubbling to handle event at a higher 
+level in the DOM than the element on which the event originated.

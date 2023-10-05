@@ -5,4 +5,8 @@
 5. SrollEvents
 6. ScrollIntoView
 7. FocusEvents
-8.
+8. Hashchange
+9. Event Delegation
+
+10. CreateEvents
+11. CustomEvents - should be done
