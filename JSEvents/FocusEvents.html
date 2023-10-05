@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus Events</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        background-color: grey;
+        padding: 10px;
+      }
+
+      input {
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+        <p>see how background of password section changes on focus</p>
+      <form>
+        <input type="text" placeholder="username" />
+        <input type="password" placeholder="password"/>
+      </form>
+    </div>
+  </body>
+
+  <script>
+    let pwd = document.querySelector("input[type='password']")
+
+    pwd.addEventListener('focus', function(e){
+        e.target.style.backgroundColor = 'red'
+    })
+    
+    pwd.addEventListener('blur', function(e){
+        e.target.style.backgroundColor = 'white'
+    })
+  </script>
+</html>
