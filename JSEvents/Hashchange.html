@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hashchange</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Simple demo of hashchange</h1>
+
+      <ul>
+        <li><a href="#page1">page1</a></li>
+        <li><a href="#page2">page2</a></li>
+        <li><a href="#page3">page3</a></li>
+      </ul>
+      <p class="location"></p>
+    </div>
+  </body>
+
+  <script>
+    window.addEventListener('hashchange', function(){
+        console.log(`hash was change to ${window.location.hash}`)
+        let p = document.querySelector('.location');
+        p.innerHTML = `current hash: ${window.location.hash}`
+    })
+  </script>
+</html>
