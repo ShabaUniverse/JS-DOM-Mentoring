@@ -10,3 +10,5 @@
 
 10. CreateEvents
 11. CustomEvents - should be done
+12. DispatchEvents
+13. MutationObserver

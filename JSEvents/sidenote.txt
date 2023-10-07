@@ -131,3 +131,21 @@ Having a large number of event handlers will take up memory and degrade the perf
 
 The event delegation technique utilizes the event bubbling to handle event at a higher 
 level in the DOM than the element on which the event originated.
+
+
+-------------------------------Custom Events-------------------------------
+
+The custom events allow you to decouple the code that you want to execute 
+after another piece of code completes. For example, 
+you can separate the event listeners in a separate script. In addition, 
+you can have multiple event listeners to the same custom event.
+
+-----------------------------Dispatch Event-------------------------------
+
+bubbles - means that element might be spread up by hierarchy;
+something like this:
+html - body - div - ul - li - a
+if you click on 'a' then it will spread up to li,ul, etc;
+
+
+
