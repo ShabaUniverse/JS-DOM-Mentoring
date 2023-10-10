@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+.main {
+    height: 100vh;
+    background: linear-gradient(135deg, #2f4e49, #47a092);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todoBox {
+    background-color: #393a3a;
+    min-height: 350px;
+    width: 500px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+h2 {
+    color: gray;
+    text-align: center;
+    font-weight: 500;
+    border-bottom: 1px solid gray;
+    padding: 5px 0;
+    width: 100%;
+}
+
+.control {
+    width: 70%;
+    margin-top: 50px;
+    border-radius: 40px;
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    border-radius: 40px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    padding-left: 15px;
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    cursor: cell;
+}
+
+input::placeholder {
+    color: #393a3a;
+}
+
+button {
+    float: right;
+    height: 100%;
+    border-radius: 40px;
+    padding: 8px 17px;
+    border: none;
+    outline: none;
+    background-color: #47a092;
+    color:white;
+    cursor: pointer;
+}
+
+ul {
+    width: 70%;
+    margin-top: 20px;
+    list-style: none;
+}
+
+ul li {
+    width: 100%;
+    color: white;
+    background-color: #47a092;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    position: relative;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+ul li::before {
+    content: '\2610';
+    margin-right: 5px;
+}
+
+ul li span {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.checked {
+    text-decoration: underline;
+    font-size: 18px;   
+    cursor: pointer;
+}
+.checked::before{
+    content: "\2611";
+}
+
