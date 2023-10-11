@@ -1,2 +1,5 @@
 1. Form
-2.
+2. Checkbox 
+    - CheckBoxIsChecked
+    - GetCheckBoxValue
+    - CheckUncheck

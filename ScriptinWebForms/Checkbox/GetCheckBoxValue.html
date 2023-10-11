@@ -5,38 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Get Checkbox Value</title>
   </head>
-
   <body>
-    <label for="car1">
-      <input type="checkbox" name="car" id="car1" value="toyota" />
-      toyota
-    </label>
-    <label for="car2">
-      <input type="checkbox" name="car" id="car2" value="mercedes" />
-      mercedes
-    </label>
-    <label for="car3">
-      <input type="checkbox" name="car" id="car3" value="bmw" /> bmw
-    </label>
+    <div class="main">
+      <label for="color1"> <input type="checkbox" name="color" id="color1" value="blue"> blue </label>
+      <label for="color2"> <input type="checkbox" name="color" id="color2" value="red"> red </label>
+      <label for="color3"> <input type="checkbox" name="color" id="color3" value="green"> green </label>
 
-    <button>get</button>
+      <button id="getBtn">Get</button>
+    </div>
   </body>
-
   <script>
-    let btn = document.querySelector("button");
-
-    function getCheckeds() {
-      let checkedOnes = document.querySelectorAll("input[name='car']:checked");
-      let array = [];
-      checkedOnes.forEach((item) => {
-        array.push(item.value);
-      });
-      console.log(array);
-      return array;
-    }
-
-    btn.addEventListener("click", function (e) {
-      alert(getCheckeds());
-    });
+    let btn = document.querySelector("#getBtn");
+    btn.addEventListener("click", function(){
+      let checkBoxes = document.querySelectorAll("input[name='color']:checked");
+      let selectedColors = [];
+      checkBoxes.forEach(element => {
+        selectedColors.push(element.value)
+      })
+      alert(selectedColors);
+    })
   </script>
 </html>
