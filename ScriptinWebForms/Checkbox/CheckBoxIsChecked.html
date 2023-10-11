@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check if Checked</title>
+</head>
+<body>
+    <div class="main">
+        <label for="accept">
+            <input type="checkbox" name="accept" id="accept" checked> Accept
+        </label>
+    </div>
+</body>
+
+<script>
+    let checkedBox = document.querySelector("#accept:checked");
+    console.log(checkedBox);
+</script>
+</html>
+
+<!-- in this example the selector "#accept:checked" checks if there is element with an id === 
+accept, and if its has attribute checked.
+
+For example, it matches this example:
+<input type="checkbox" name="accept" id="accept">
+
+But not this:
+<input type="checkbox" id="accept">
+ -->
