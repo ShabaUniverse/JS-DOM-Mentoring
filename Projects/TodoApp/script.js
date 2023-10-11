@@ -45,5 +45,4 @@ function clearData(){
     localStorage.clear()
 }
 
-
 showData();
