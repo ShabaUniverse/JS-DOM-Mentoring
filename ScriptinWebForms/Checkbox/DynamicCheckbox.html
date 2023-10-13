@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Checkbox</title>
+  </head>
+  <body>
+    <div class="main"></div>
+  </body>
+
+  <script>
+    let cars = ['toyota', 'bmw', 'mercedez'];
+    let main = document.querySelector(".main");
+
+    cars.map(car => {
+        let label = document.createElement("label");
+        label.setAttribute("for", car);
+
+        let checkbox = document.createElement("input");
+        checkbox.type = 'checkbox'
+        checkbox.id = car;
+        checkbox.name = "car";
+        checkbox.value = car;
+
+        label.appendChild(checkbox);
+        label.appendChild(document.createTextNode(car.toUpperCase()));
+
+        main.appendChild(label);
+    })
+  </script>
+</html>
