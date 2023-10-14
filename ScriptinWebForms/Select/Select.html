@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select</title>
+  </head>
+  <body>
+    <div class="main">
+      <select id="framework">
+        <option value="react">React</option>
+        <option value="angular">Angular</option>
+        <option value="vue">Vue</option>
+        <option value="solid">Solid</option>
+      </select>
+
+      <button id="btn">Get</button>
+      <button id="btnGet">Get Option 1 index</button>
+      <button id="selectedOption">Get Selected Option</button>
+    </div>
+  </body>
+
+  <script>
+    let selection = document.querySelector("#framework");
+
+    let btn = document.querySelector("#btn");
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      alert(selection.value);
+    });
+
+    // this is to get specific value or text;
+    btnGet = document.querySelector("#btnGet");
+    btnGet.addEventListener("click", function (e) {
+      e.preventDefault();
+      console.log(selection.options[1].value);
+      console.log(selection.options[1].text);
+    });
+
+    // choose selected option, it returns an element.
+    // To get the selected option of a <select> element with a single selection, you use the following code:
+    let btnSelOp = document.querySelector("#selectedOption");
+    
+    btnSelOp.addEventListener('click', function(e){
+        e.preventDefault();
+        let selectedOption = selection.options[selection.selectedIndex];
+        console.log(selectedOption);
+        console.log(selectedOption.text)
+        console.log(selectedOption.value)
+    })
+  </script>
+</html>
