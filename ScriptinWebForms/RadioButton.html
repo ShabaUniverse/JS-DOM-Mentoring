@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio Button</title>
+  </head>
+  <body>
+    <div class="main">
+      <input type="radio" name="size" id="s" value="S" />
+      <label for="s">S</label>
+
+      <input type="radio" name="size" id="m" value="M" />
+      <label for="m">M</label>
+
+      <input type="radio" name="size" id="l" value="L" />
+      <label for="l">L</label>
+
+      <input type="radio" name="size" id="xl" value="XL" />
+      <label for="xl">XL</label>
+
+      <button id="btn">Show Selected</button>
+      <br>
+      <small></small>
+    </div>
+  </body>
+
+  <script>
+    let btn = document.querySelector("#btn")
+    let radios = document.querySelectorAll("input[name='size']");
+    let text = document.querySelector("small");
+    btn.addEventListener('click', function(){
+        for(let radio of radios){
+            if(radio.checked === true){
+                text.innerHTML = `Your choice - ${radio.value}`;
+                // since we have to choose only one, we break the statement 
+                break;
+            }
+        }
+    })
+  </script>
+</html>
