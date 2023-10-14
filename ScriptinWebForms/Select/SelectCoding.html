@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Select Coding</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="main">
-        
+      <select id="framework" multiple>
+        <option value="react">React</option>
+        <option value="vue">Vue</option>
+        <option value="angular">Angular</option>
+        <option value="solid">Solid</option>
+      </select>
+
+      <button id="btn">press</button>
     </div>
-</body>
+  </body>
+
+  <script>
+    let btn = document.querySelector("#btn");
+    let frameOptions = document.querySelector("#framework");
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      let values = "";
+      // frameOptions is HTML collection, not an array. Therefore we use call() method
+      // to borrow the filter from array object;
+      let selectedOnes = [].filter.call(
+        frameOptions.options,
+        (option) => option.selected,
+      );
+      selectedOnes.map((item) => {
+        values += " " + item.innerHTML;
+      });
+      alert(values);
+    });
+  </script>
 </html>
