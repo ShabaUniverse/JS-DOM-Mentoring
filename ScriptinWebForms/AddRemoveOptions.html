@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Remove Options</title>
+  </head>
+  <body>
+    <div class="main">
+      <select id="selection">
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+        <option value="green">green</option>
+      </select>
+    </div>
+  </body>
+  <script>
+
+    // this is the way create option with Option constructor and add method:
+
+    // let newOption = new Option("option text", "option value");
+    // let selection = document.querySelector("select");
+    // selection.add(newOption, undefined);
+
+
+
+    // this is the way using the DOM methods:
+
+    // let selection = document.querySelector("select");
+    // let newOption = document.createElement("option");
+    // let optionText = document.createTextNode("yellow");
+    // newOption.appendChild(optionText);
+    // newOption.setAttribute("value", "yellow");
+    // selection.appendChild(newOption);
+    
+    
+    // removing and element:
+    let selection = document.querySelector("select");
+    // 1.using the remove method:
+    // selection.remove(0);
+
+    // 2.reference to the option of selection by its index and set its value to null.
+    // selection.options[0] = null;
+
+    // 3.remove specific option using removeChilde method.
+    // selection.removeChild(selection.options[0]);
+
+    function removingAll(selects){
+      while(selects.options.length > 0){
+        selects.remove(0);
+      }
+    }
+
+    removingAll(selection);
+
+
+  </script>
+</html>
