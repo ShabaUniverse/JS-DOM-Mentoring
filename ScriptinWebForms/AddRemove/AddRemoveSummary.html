@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Remove Summary</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        border: 1px solid gainsboro;
+        padding: 5px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+      }
+
+      input,
+      label,
+      button,
+      select {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 20px;
+      }
+
+      button {
+        background-color: #4090ec;
+        padding: 5px 0;
+        border: none;
+        color: white;
+        margin-top: 5px;
+      }
+
+      input {
+        border: 1px solid gainsboro;
+        outline: none;
+        padding: 4px 5px;
+      }
+
+      select {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="box">
+          <form>
+            <label for="framework">Framework:</label>
+            <input type="text" id="framework" autocomplete="off"/>
+            <button id="addButton">Add</button>
+
+            <label for="fwList">Framework List:</label>
+            <select id="fwList" multiple></select>
+            <button id="removeButton">Remove selected framework</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    let textInput = document.querySelector("#framework");
+    let addButton = document.querySelector("#addButton");
+    let selection = document.querySelector("select");
+    let removeButton = document.querySelector("#removeButton");
+
+    addButton.addEventListener('click', function(e){
+        e.preventDefault();
+        if(textInput.value.length < 1){
+            alert("please type on something")
+        }else{
+            let newOption = document.createElement('option');
+            let newOptionText = document.createTextNode(textInput.value);
+            newOption.value = textInput.value;
+            newOption.appendChild(newOptionText);
+            selection.appendChild(newOption);
+            textInput.value = ""
+        }
+        
+    })
+    
+    removeButton.addEventListener("click", function(e){
+        e.preventDefault();
+        let listToDelete = [];
+        [].filter.call(selection, option => option.selected).map(item => listToDelete.push(item.value));
+        for(let item of listToDelete){
+            if(selection.options.value === item){
+                console.log("it has");
+            }
+        }
+    })
+  </script>
+</html>
