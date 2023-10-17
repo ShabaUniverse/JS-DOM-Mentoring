@@ -11,4 +11,7 @@
 5. Add Remove
     - Add Remove Options
     - Add Remove Summary
-    
+6. ChangeEvent
+    - Change Event
+    - Change On Radio
+7. Input Event
