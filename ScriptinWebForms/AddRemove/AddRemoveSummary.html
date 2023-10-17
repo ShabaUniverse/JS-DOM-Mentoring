@@ -90,19 +90,22 @@
             newOption.value = textInput.value;
             newOption.appendChild(newOptionText);
             selection.appendChild(newOption);
-            textInput.value = ""
+            textInput.value = "";
+            textInput.focus()
         }
         
-    })
+    })  
     
     removeButton.addEventListener("click", function(e){
         e.preventDefault();
         let listToDelete = [];
         [].filter.call(selection, option => option.selected).map(item => listToDelete.push(item.value));
         for(let item of listToDelete){
-            if(selection.options.value === item){
-                console.log("it has");
+          for(let i=0; i<selection.options.length; i++){
+            if(selection.options[i].value === item){
+              selection.remove(i);
             }
+          }
         }
     })
   </script>
