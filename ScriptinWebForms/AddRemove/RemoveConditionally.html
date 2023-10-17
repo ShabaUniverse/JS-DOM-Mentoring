@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove Conditionally</title>
+  </head>
+  <body>
+    <div class="main">
+      <select id="selection">
+        <option value="a">a</option>
+        <option value="b">b</option>
+        <option value="c">b</option>
+      </select>
+      <button>delete b & c</button>
+    </div>
+  </body>
+  <script>
+    let selection = document.querySelector('#selection');
+    let btn = document.querySelector("button");
+
+    btn.addEventListener("click", function(e){
+        e.preventDefault();
+        for(let i=0; i < selection.length; i++){
+            if(selection.options[i].value === 'b' || selection.options[i].value === 'c'){
+                selection.remove(i);
+                i--;
+            }
+        }
+    })
+  </script>
+</html>
+
+<!--
+    after remove() method. the data changes, so it might ignore the next element cause the elements index
+    decreased. To make it work properly, we should decrease index as well.
+-->

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change on Radio</title>
+  </head>
+  <body>
+    <p>Status:</p>
+    <input type="radio" name="status" id="pending" />
+    <label for="pending">Pending</label>
+
+    <input type="radio" name="status" id="succeed" />
+    <label for="succeed">Succeed</label>
+
+    <input type="radio" name="status" id="reject" />
+    <label for="reject">Reject</label>
+    <br>
+    <span></span>
+  </body>
+
+  <script>
+    document.body.addEventListener("change", function (e) {
+      e.preventDefault();
+      let message = document.querySelector("span");
+      let target = e.target;
+      switch (target.id) {
+        case "pending":
+          message.innerHTML = "target on pending";
+          break;
+        case "succeed":
+          message.innerHTML = "target on succeed";
+          break;
+        case "reject":
+          message.innerHTML = "target on reject";
+          break;
+      }
+    });
+  </script>
+</html>
